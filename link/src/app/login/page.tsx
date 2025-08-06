@@ -14,7 +14,7 @@ const Login = () => {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:3001/api/login", {
+    const res = await fetch("https://mini-linkdin-ktmx.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

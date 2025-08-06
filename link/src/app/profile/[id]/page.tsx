@@ -45,8 +45,8 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const [userRes, postsRes] = await Promise.all([
-          fetch(`http://localhost:3001/api/users/${userId}`),
-          fetch(`http://localhost:3001/api/posts`),
+          fetch(`https://mini-linkdin-ktmx.onrender.com/api/users/${userId}`),
+          fetch(`https://mini-linkdin-ktmx.onrender.com/api/posts`),
         ]);
 
         if (!userRes.ok || !postsRes.ok) throw new Error("Error fetching data");
@@ -84,7 +84,7 @@ const Profile = () => {
     setSaving(true);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:3001/api/users/${userId}`, {
+      const res = await fetch(`https://mini-linkdin-ktmx.onrender.com/users/${userId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

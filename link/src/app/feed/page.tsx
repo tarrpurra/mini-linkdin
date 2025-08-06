@@ -21,7 +21,7 @@ const Feed = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/posts", {
+        const res = await fetch("https://mini-linkdin-ktmx.onrender.com/api/posts", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

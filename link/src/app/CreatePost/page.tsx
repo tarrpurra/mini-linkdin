@@ -22,7 +22,7 @@ const CreatePost = () => {
       const name = localStorage.getItem("name") || "Anonymous";
 
       // Make API call to your backend
-      const res = await fetch("http://localhost:3001/api/posts", {
+      const res = await fetch("hhttps://mini-linkdin-ktmx.onrender.com/api/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
