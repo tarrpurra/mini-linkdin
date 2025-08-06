@@ -25,7 +25,11 @@ import { auth, db } from "./DB/connection.js";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://mini-linkdin-three.vercel.app", // or "*", only for testing
+  credentials: true,
+}));
+
 app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
